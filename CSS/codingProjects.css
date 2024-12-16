@@ -1,0 +1,143 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFEFEF;
+}
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  margin-top: 90px;
+}
+.slide-content{
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.card{
+    border-radius: var(--border-radius);
+    background-color: #FFF;
+    width: 27%;
+    margin: 30px;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070F4;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+  margin-top: 5px;
+}
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: var(--border-radius);
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
+
+.see-more-btn{
+    padding: 8px;
+    background: white;
+    border: none;
+    box-shadow: 0 2px 6px 0 #76767663;
+    border-radius: var(--border-radius);
+    color: #4575b3;
+    font-weight: 600;
+    font-size: 15px;
+    transition: .4s;
+    width: 21%;
+    margin: 23px 40% 30px;
+}
+.see-more-btn i{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.see-more-btn:hover{
+    background: #f1f3f5;
+    box-shadow: 0 5px 6px 0 #76767663;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
+  }
+}
